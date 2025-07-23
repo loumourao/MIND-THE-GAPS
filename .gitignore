@@ -1,1 +1,4 @@
 .mind_the_gaps_pyvenv/
+__pycache__/
+first_quadrant_circles.csv
+proximity_query.png
