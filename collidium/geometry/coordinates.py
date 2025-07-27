@@ -1,5 +1,4 @@
 from __future__ import annotations
-from functools import singledispatchmethod
 from numbers import Real
 from collidium.geometry.vectors import vxyz
 
@@ -17,13 +16,27 @@ class xyz:
 
     def cz(self) -> Real:
         return self.z
-    
-    @singledispatchmethod
+
+    def __add__(self, other: vxyz) -> xyz:
+        return xyz(self.cx() + other.cx(),
+                   self.cy() + other.cy(),
+                   self.cz() + other.cz())
+
     def __sub__(self, other: xyz) -> vxyz:
         return vxyz(self.cx() - other.cx(),
                     self.cy() - other.cy(),
                     self.cz() - other.cz())
-        
+
+    def __eq__(self, other: xyz) -> bool:
+        return self.cx() == other.cx() and \
+               self.cy() == other.cy() and \
+               self.cz() == other.cz()
+
+    def __str__(self) -> str:
+        return f"xyz({self.cx():.2g}, \
+                     {self.cy():.2g}, \
+                     {self.cz():.2g})"
+
 class x(xyz):
     def __init__(self, x: Real) -> xyz:
         super().__init__(x, 0, 0)

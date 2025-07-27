@@ -10,10 +10,10 @@ def first_quadrant_random_circle_pair(min_x: int, max_x: int,
                                       boundary_delta: int) -> Tuple[circle, circle]:
     c1 = xy(randrange(min_x + boundary_delta, max_x - boundary_delta + 1),
             randrange(min_y + boundary_delta, max_y - boundary_delta + 1))
-    r1 = randrange(1, min(c1.cx(), c1.cy(), max_x - c1.cx(), max_y - c1.cy()) + 1)
+    r1 = randrange(boundary_delta, min(c1.cx(), c1.cy(), max_x - c1.cx(), max_y - c1.cy()) + 1)
 
     c2 = xy(randrange(min_x + boundary_delta, max_x - boundary_delta + 1),
             randrange(min_y + boundary_delta, max_y - boundary_delta + 1))
-    r2 = randrange(1, min(c2.cx(), c2.cy(), max_x - c2.cx(), max_y - c2.cy()) + 1)
+    r2 = randrange(boundary_delta, min(c2.cx(), c2.cy(), max_x - c2.cx(), max_y - c2.cy()) + 1)
 
     return circle_pair(c1, r1, c2, r2)
