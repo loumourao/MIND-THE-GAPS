@@ -9,7 +9,7 @@ MIND THE GAPS is an open-source project that focuses on the generation of geomet
 5. **`collidium`**: A meta-package that aggregates the aforementioned packages;
 6. A collection of **Jupyter notebooks** for training and testing Machine Learning models for collision detection.
 
-This project is in its early stages and draws great inspiration from the geometric notations and functionalities of [Khepri](https://algorithmicdesign.github.io/tools/khepri.html), developed by the Algorithmic Design for Architecture group (led by Professor António Menezes Leitão) at INESC-ID / Instituto Superior Técnico.
+This project is in its early stages and draws great inspiration from the geometric notations and functionalities of [Khepri](https://algorithmicdesign.github.io/tools/khepri.html): an open-source project developed by the Algorithmic Design for Architecture group (led by Professor António Menezes Leitão) at INESC-ID / Instituto Superior Técnico.
 
 ---
 
