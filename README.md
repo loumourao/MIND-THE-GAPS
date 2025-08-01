@@ -2,7 +2,7 @@
 
 MIND THE GAPS is an open-source project that focuses on the generation of geometric datasets for experimenting with Machine Learning-based collision detection. It includes:
 
-1. **`geometry package`**: A package for geometric manipulation primitives;
+1. **`geometry`**: A package for geometric manipulation primitives;
 2. **`generative_functions`**: A package for dataset generation routines;
 3. **`interactions`**: A package for collision detection utilities;
 4. **`machine_learning`**: A package dataset managers and Machine Learning model definitions;
