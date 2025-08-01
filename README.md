@@ -19,4 +19,5 @@ This project is in its early stages and draws great inspiration from the geometr
 - Professor Daniel Simões Lopes
 - Postdoc Ivo Roupa
 - Ph.D. Student Lourenço Mourão
+- Professor Manuel Cabido Lopes
 - B.Sc. Student Rodrigo Damasceno
