@@ -1,3 +1,22 @@
 # MIND THE GAPS
 
-This is an open-source project, which is a currently under its early stage of construction, that centers on the generation of geometric datasets aimed at experimenting on machine learning-based collision detection.
+MIND THE GAPS is an open-source project that focuses on the generation of geometric datasets for experimenting with Machine Learning-based collision detection. It includes:
+
+1. **`geometry package`**: A package for geometric manipulation primitives;
+2. **`generative_functions`**: A package for dataset generation routines;
+3. **`interactions`**: A package for collision detection utilities;
+4. **`machine_learning`**: A package dataset managers and Machine Learning model definitions;
+5. **`collidium`**: A meta-package that aggregates the aforementioned packages;
+6. A collection of **Jupyter notebooks** for training and testing Machine Learning models for collision detection.
+
+This project is in its early stages and draws great inspiration from the geometric notations and functionalities of [Khepri](https://algorithmicdesign.github.io/tools/khepri.html), developed by the Algorithmic Design for Architecture group (led by Professor António Menezes Leitão) at INESC-ID / Instituto Superior Técnico.
+
+---
+
+## Team
+(In alphabetic order)
+
+- Professor Daniel Simões Lopes
+- Postdoc Ivo Roupa
+- Ph.D. Student Lourenço Mourão
+- B.Sc. Student Rodrigo Damasceno
