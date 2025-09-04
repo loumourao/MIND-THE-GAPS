@@ -47,14 +47,40 @@ def circles_proximity_queries_dataset_generator_v2(
 ) -> None:
     columns = ["x1", "y1", "r1", "x2", "y2", "r2", "intersects"]
     generic_dataset_generator(
-        n, intersection_distribution, file_name, columns, row_generator_fn=proximity_query_row
+        n,
+        intersection_distribution,
+        file_name,
+        columns,
+        row_generator_fn=proximity_query_row,
     )
 
 
+def interpenetration_distance_row(intersects):
+    while True:
+        circle1, circle2 = first_quadrant_random_circle_pair(0, 100, 0, 100, 1)
+        if intersects == intersects(circle1, circle2):
+            break
+    c1 = circle1.get_center()
+    r1 = circle1.get_radius()
+    c2 = circle2.get_center()
+    r2 = circle2.get_radius()
+    inter_depth = interpenetration_distance(circle1, circle2)
+    return [c1.x, c1.y, r1, c2.x, c2.y, r2, inter_depth]
 
 
+# TODO: Maybe add it inside of the function so it's scoped there
+def circles_interpenetration_distance_dataset_generator_v2(
+    n: Real, intersection_distribution: Real, file_name: str
+) -> None:
+    columns = ["x1", "y1", "r1", "x2", "y2", "r2", "interpenetration_distance"]
 
-
+    generic_dataset_generator(
+        n,
+        intersection_distribution,
+        file_name,
+        columns,
+        row_generator_fn=interpenetration_distance_row,
+    )
 
 
 # Not a big fan of this function... A much more clever way of managing interesection distributions should be considered (generative_functions itself)
